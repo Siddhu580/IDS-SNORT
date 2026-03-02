@@ -50,7 +50,7 @@ For detecting of making an outbound connection to an FTP server :-
 ## EVIDENCE & VALIDATION
 
 1) HTTP :- 
-
+(Evidence/401.png)
 
 
 
