@@ -9,18 +9,18 @@
 | SSH Brute-Force Detection | Simulated Hydra attack against SSH | Threshold detection, log correlation |
 
 ## Skills 
-# Network traffic analysis
-# TCP behavior understanding
-# IDS rule creation
-# Behavioral detection
-# Log correlation
-# False positive tuning
+1) Network traffic analysis
+2) TCP behavior understanding
+3) IDS rule creation
+4) Behavioral detection
+5) Log correlation
+6) False positive tuning
 
 ##  Tools Used
-# Snort
-# Hydra
-# Wireshark
-# VirtualBox lab environment
+1) Snort
+2) Hydra
+3) Wireshark
+4) VirtualBox lab environment
 
 
 
