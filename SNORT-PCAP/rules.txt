@@ -1,0 +1,23 @@
+# $Id: local.rules,v 1.11 2004/07/23 20:15:44 bmc Exp $
+# ----------------
+# LOCAL RULES
+# ----------------
+# This file intentionally does not come with signatures.  Put your local
+# additions here.
+
+#alert tcp any 80 -> any any (msg:"[Failed login detected] code 401";flow:to_client,established;content:"401";http_stat_code;threshold:type threshold, track by_dst, count 10, seconds 30;sid:2000005;rev:2;)
+
+#alert tcp any 80 -> any any (msg:"[Sucessfull login detected] code 302 ";flow:to_client,established;content:"302";http_stat_code;sid:3000005;rev:2;)
+
+#alert tcp any any -> any 80 ( msg:"some one is trying to acess local files via LFI"; flow:to_server,established;content:"../";http_uri;sid:60000001; rev:1; ) 
+
+#alert tcp any any -> any 80 ( msg:"[Alert Open ssh key getting shared]"; flow:to_server,established;content:"id_rsa";http_uri;sid:100000001; rev:1; ) 
+
+
+
+
+#alert tcp any 80 -> any any (msg:"[Alert] SSH key getting shared over HTTP ";flow:to_client,established ;file_data;content:"|2D 2D 2D 2D 2D 42 45 47 49 4E 20 4F 50 45 4E 53 53 48 20 50 52 49 56 41 54 45 20 4B 45 59 2D 2D 2D 2D 2D|";depth:40 ;sid:100000005;rev:2;)
+
+#alert tcp any any -> any 22 (msg:"[ALERT : some one is trying to connect to our ssh server]"; sid : 6000000000; rev : 1;)
+
+#alert tcp any any -> !192.168.1.0/24 21 (msg:"[FTP connection to an ip outside our n/w]"; sid : 600000000011; rev : 1;)
