@@ -50,31 +50,36 @@ For detecting of making an outbound connection to an FTP server :-
 ## EVIDENCE & VALIDATION
 
 1) HTTP :- 
-(Evidence/401.png)
+![HTTP](Evidence/401.png)
 
 
 
 2) CODE 302 :- 
+![302](Evidence/302.png)
 
 
 
 
 3) LFI vuln :- 
+![LFI](Evidence/LFI.png)
 
 
 
 
 
 4) SSH KEY :- 
+![SSH-KEY](Evidence/ssh-key.png)
 
 
 
 5) SSH connection :-
+![connection-ssh](Evidence/connect-ssh.png)
 
 
 
 
 6) FTP connection to an external IP :-
+![ftp](Evidence/ftp-out.png)
 
 
 
